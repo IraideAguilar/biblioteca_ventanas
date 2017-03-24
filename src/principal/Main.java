@@ -3,6 +3,7 @@ package principal;
 import Controlador.LibroControlador;
 import Controlador.SocioControlador;
 import Vista.BorrarSocio;
+import Vista.BusquedaSocio;
 import Vista.FormularioLibros;
 import Vista.FormularioSocio;
 import Vista.GestionLibros;
@@ -32,6 +33,7 @@ public class Main {
 		GestionLibros gestionLibros = new GestionLibros(principal,true);
 		FormularioLibros formularioLibros = new FormularioLibros(gestionLibros,true);
 		BorrarSocio borrarSocio = new BorrarSocio(gestionSocios,true);
+		BusquedaSocio busquedaSocio = new BusquedaSocio(gestionSocios,true);
 		
 		//Leihoei controladoreak ezarri, horrela erlazionatuta egongo dira.
 		principal.setSocioControlador(socioControlador);
@@ -41,6 +43,7 @@ public class Main {
 		formularioLibros.setLibroControlador(libroControlador);
 		principal.setLibroControlador(libroControlador);
 		borrarSocio.setSocioControlador(socioControlador);
+		busquedaSocio.setSocioControlador(socioControlador);
 		
 		//Controladoreari leiho eta modeloak asignatu.
 		socioControlador.setPrincipal(principal);
@@ -52,6 +55,7 @@ public class Main {
 		libroControlador.setFormularioLibros(formularioLibros);
 		libroControlador.setLibroModelo(libroModelo);
 		libroControlador.setPrincipal(principal);
+		socioControlador.setBusquedaSocio(busquedaSocio);
 		
 		
 		principal.setVisible(true);

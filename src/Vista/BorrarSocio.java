@@ -28,6 +28,7 @@ public class BorrarSocio extends JDialog {
 	private JTextField textFieldPoblacion;
 	private JTextField textFieldProvincia;
 	private JTextField textFieldDni;
+	private JComboBox comboBoxSocios;
 
 	/**
 	 * Create the dialog.
@@ -132,7 +133,7 @@ public class BorrarSocio extends JDialog {
 			textFieldDni.setColumns(10);
 		}
 
-		JComboBox comboBoxSocios = new JComboBox();
+		comboBoxSocios = new JComboBox();
 		comboBoxSocios.setBounds(213, 34, 171, 20);
 		contentPanel.add(comboBoxSocios);
 
@@ -153,11 +154,12 @@ public class BorrarSocio extends JDialog {
 		this.socioControlador = socioControlador;
 	}
 
-	public void rellenarCombo(ArrayList<Socio> socios){
-		Iterator<Socio> iterator =socios.iterator();
-		while (iterator.hasNext()){
-			Socio socio = iterator.next();
-//			this.rellenarCombo.addItem
-			}
-		}
+//	public void rellenarCombo(ArrayList<Socio> socios) {
+//		Iterator<Socio> iterator = socios.iterator();
+//		while (iterator.hasNext()) {
+//			Socio socio = iterator.next();
+//			this.comboBoxSocios.addItem(socio.getId(), socio.getNombre(), socio.getApellido(), socio.getDireccion(),
+//					socio.getPoblacion(), socio.getProvincia(), socio.getDni());
+//		}
+	
 }

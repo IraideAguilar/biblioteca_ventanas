@@ -1,6 +1,9 @@
 package Controlador;
 
+import java.util.ArrayList;
+
 import Vista.BorrarSocio;
+import Vista.BusquedaSocio;
 import Vista.FormularioSocio;
 import Vista.GestionSocios;
 import Vista.Principal;
@@ -14,6 +17,7 @@ public class SocioControlador {
 	private FormularioSocio formularioSocio;
 	private Socio_modelo socioModelo;
 	private BorrarSocio borrarSocio;
+	private BusquedaSocio busquedaSocio;
 	
 	public Principal getPrincipal() {
 		return principal;
@@ -69,6 +73,14 @@ public class SocioControlador {
 
 	}
 
+	public BusquedaSocio getBusquedaSocio() {
+		return busquedaSocio;
+	}
+
+	public void setBusquedaSocio(BusquedaSocio busquedaSocio) {
+		this.busquedaSocio = busquedaSocio;
+	}
+
 	public void guardarSocio(String nombre, String apellido, String direccion, String poblacion, String provincia,
 			String dni) {
 		
@@ -91,6 +103,14 @@ public class SocioControlador {
 		//Abrir ventana.
 		this.borrarSocio.setVisible(true);
 		
+	}
+
+	public void abrirBusquedaSocio() {
+		ArrayList<Socio> socios = socioModelo.select();
+		busquedaSocio.rellenarTabla(socios);
+		
+		// TODO Apéndice de método generado automáticamente
+		this.busquedaSocio.setVisible(true);
 	}
 
 }

@@ -53,16 +53,22 @@ public class GestionSocios extends JDialog {
 			contentPanel.add(buttonBorrarSocio);
 		}
 		{
-			JButton buttonCambiarSocio = new JButton("Cambiar socio");
-			buttonCambiarSocio.setBounds(140, 155, 106, 23);
-			contentPanel.add(buttonCambiarSocio);
-		}
-		{
 			JLabel lblGestionDeSocios = new JLabel("GESTION DE SOCIOS");
 			lblGestionDeSocios.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
 			lblGestionDeSocios.setBounds(107, 21, 169, 14);
 			contentPanel.add(lblGestionDeSocios);
 		}
+		
+		JButton btnNewButton = new JButton("B\u00FAsqueda");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				socioControlador.abrirBusquedaSocio();
+				
+			}
+		});
+		btnNewButton.setBounds(140, 163, 106, 23);
+		contentPanel.add(btnNewButton);
 	}
 
 	public SocioControlador getSocioControlador() {
@@ -72,5 +78,4 @@ public class GestionSocios extends JDialog {
 	public void setSocioControlador(SocioControlador socioControlador) {
 		this.socioControlador = socioControlador;
 	}
-
 }

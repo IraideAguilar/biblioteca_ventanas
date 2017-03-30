@@ -2,12 +2,22 @@ package Controlador;
 
 import Vista.FormularioLibros;
 import Vista.GestionLibros;
+import Vista.LiburuBilatzailea;
 import Vista.Principal;
 import modelo.Libro;
 import modelo.Libro_modelo;
 
 public class LibroControlador {
-
+	
+	private LiburuBilatzailea liburuBiltzailea;
+	
+	
+	public LiburuBilatzailea getLiburuBiltzailea() {
+		return liburuBiltzailea;
+	}
+	public void setLiburuBiltzailea(LiburuBilatzailea liburuBiltzailea) {
+		this.liburuBiltzailea = liburuBiltzailea;
+	}
 	private Principal principal;
 	private GestionLibros gestionLibros;
 	private FormularioLibros formularioLibros;

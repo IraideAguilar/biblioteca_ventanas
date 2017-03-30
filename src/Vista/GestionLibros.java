@@ -18,6 +18,7 @@ import java.awt.Font;
 public class GestionLibros extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
+	
     private LibroControlador libroControlador;
 
 	/**

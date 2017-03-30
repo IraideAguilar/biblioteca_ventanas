@@ -18,6 +18,7 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 
 public class BorrarSocio extends JDialog {
+	
 	private SocioControlador socioControlador;
 
 	private final JPanel contentPanel = new JPanel();

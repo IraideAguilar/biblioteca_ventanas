@@ -8,6 +8,7 @@ import Vista.FormularioLibros;
 import Vista.FormularioSocio;
 import Vista.GestionLibros;
 import Vista.GestionSocios;
+import Vista.LiburuBilatzailea;
 import Vista.Principal;
 import modelo.Config;
 import modelo.Libro_modelo;
@@ -21,6 +22,7 @@ public class Main {
 		//Sortu modelo.
 		Socio_modelo socioModelo = new Socio_modelo();
 		Libro_modelo libroModelo = new Libro_modelo();
+		
 		
 		//Sortu controlador.
 		SocioControlador socioControlador = new SocioControlador();
@@ -60,9 +62,11 @@ public class Main {
 		
 		principal.setVisible(true);
 		
-		
-		
-		
+		GestionLibros gestionLibro;
+//		LiburuBilatzailea liburuBilatzailea = new LiburuBilatzailea(gestionLibro,true);
+//		liburuBilatzailea.libroControlador(libroControlador);
+//		libroControlador.setLiburuBilatzailea()
+//		
 	}
 
 }

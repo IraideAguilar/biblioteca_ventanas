@@ -2,6 +2,7 @@ package Vista;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -9,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Controlador.LibroControlador;
+import modelo.Libro;
 
 import javax.swing.JTabbedPane;
 import javax.swing.JComboBox;
@@ -140,4 +142,29 @@ public void setlibroControlador(LibroControlador libroControlador) {
 		lblNewLabel_5.setBounds(64, 177, 46, 14);
 		panel_2.add(lblNewLabel_5);
 	}
+	
+	public void liburuConboaBete(ArrayList<Libro> libros) {
+		DefaultConboBoxMode1 defaultConboBoxMode1 =new DefaultConboBoxMode1<String>();
+		for(Libro libro : libro){
+			defaultConboBoxMode1.addElement(libro.getId()+":"+ libro.getTitulo());
+			this.conboBoxTitulua.setMode(defaultConboboxMode1());
+		}
+	}
+	
+	
+	
+	protected void conboBoxTituluaActionPerformed(){
+		String item = String.valueOf(this.conboBoxTitulua.getSelectedItem());
+		String[] partes = item.split("");
+	    int idLiburua = Integer.parseInt(partes[0]);
+	    this.libroControlador.bilatuTituluarekin(idLiburua);
+	    
+	}
+	
+    public void tituloPestanaBete(Libro libro){
+    	this.textFieldAutorea.setText(libro.getAutor());
+        this.textFieldOrriKop.setText(String.valueOf);
+    }
+	
+	
 }

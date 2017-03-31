@@ -1,5 +1,7 @@
 package Controlador;
 
+import java.util.ArrayList;
+
 import Vista.FormularioLibros;
 import Vista.GestionLibros;
 import Vista.LiburuBilatzailea;
@@ -71,6 +73,18 @@ public class LibroControlador {
 		this.formularioLibros.dispose();
 		
 	}
+	
+	public void abrirLiburuBilatzailea(){
+		ArrayList <Libro> libros = this.libroModelo.select();
+		this.liburuBilatzailea.liburuComboaBete(libros);
+		this.liburuBilatzailea.setVisible(true);	
+		
+	}
+	
+	public void bilatuTituluarekin(int idLiburua){
+	Libro libro = this.libro_modelo.select(idLiburua);
+	this.liburuBiltzailea.tituloPestanaBete(libro);
+	
 	
 	
 }
